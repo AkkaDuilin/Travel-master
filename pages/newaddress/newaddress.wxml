@@ -1,0 +1,46 @@
+<!--manageAddress.wxml-->
+<form bindsubmit='addAddress'>
+<view class="user_input">
+	<view class="users_detail flexRowBetween">
+		<view class="input_note">收货人:</view>
+		<input name='username' placeholder="请输入收货人"></input>
+	</view>
+</view>
+<view class="user_input">
+	<view class="users_detail flexRowBetween">
+		<view class="input_note">手机号码:</view>
+		<input name='phonenumber' placeholder="请输入手机号码" style="width:64%;"></input>
+		<view class="address_right" style="width:13%;">
+			<text>+86</text>
+				<image src="../../resources/images/nextpage.png" style=""></image>
+		</view>
+	</view>
+</view>
+<view class="user_input">
+	<view class="users_detail flexRowBetween">
+		<view class="input_note">所在地区:</view>
+		
+		<picker mode="region" class="" value="{{region}}" custom-item="{{customItem}}" bindchange="bindDateChange" style="width:77%;position:relative;right:0rpx;align-items:center;" name='area'>
+		<view mode="region" style="width:95%;float:left;font-size:30rpx;color:#b2b2b2;">{{region[0]}},{{region[1]}},{{region[2]}}</view>
+		<view class="next_page" style="width:5%;float:right;">
+				<image src="../../resources/images/nextpage.png" style=""></image>
+			</view>
+		</picker>
+	</view>
+</view>
+<view class="user_input">
+	<view class="users_detail flexRowBetween">
+		<view class="input_note">详细地址:</view>
+		<input placeholder="如街道，门牌号" name='address'></input>
+	</view>
+</view>
+<view class="user_input flexRowBetween">
+	<view class="input_note address_set">设为默认地址</view>
+	<view class="body-view">
+		<switch bindchange="switch2Change"/>
+	</view>
+</view>
+<button class="submit_info" form-type='submit'>
+	保存
+</button>
+</form>

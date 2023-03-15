@@ -1,0 +1,11 @@
+<view class='container'>
+  <view class='articleCon'>
+    <swiper indicator-dots='true' indicator-color='#fff' indicator-active-color='#87C6FF' autoplay = 'true' interval='1000' circular='true'>
+    <swiper-item wx:for = '{{[31,32,33]}}' wx:for-item = "banner" wx:key = 'index'>
+      <image src = '../article/{{banner}}.jpg'></image>
+    </swiper-item>
+  </swiper>
+    <text class='title'>{{article.title}}</text>
+    <text class='content' decode='true'>{{article.content}}</text>
+  </view>
+</view>

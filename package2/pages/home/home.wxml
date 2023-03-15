@@ -1,0 +1,18 @@
+<!--pages/home/home.wxml-->
+<view class = "container">
+  <swiper indicator-dots='true' indicator-color='#fff' indicator-active-color='#87C6FF' autoplay = 'true' interval='1000' circular='true'>
+    <swiper-item wx:for = '{{[1,2]}}' wx:for-item = "banner" wx:key = 'index'>
+      <image src = '../article/{{banner}}.jpg'></image>
+    </swiper-item>
+  </swiper>
+  <view class='article'>
+    <view class='article-item' wx:for = '{{article}}' wx:key = 'index'>
+      <navigator url = '{{item.link}}' open-type="navigate">
+        <image src = '{{item.imgUrl}}' class='articlePic' mode="widthFix"></image>
+        <view class='articleTitle'>{{item.title}}</view>
+      </navigator>
+    </view>
+  </view>
+</view>
+
+

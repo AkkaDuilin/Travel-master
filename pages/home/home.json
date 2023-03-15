@@ -1,0 +1,10 @@
+{
+	"usingComponents": {
+    "menu": "../navs-bong/navs-bong",
+    "topbar": "./components/topbar/topbar",
+    "navs": "./components/navs/navs",
+    "articles": "./components/articles/articles"
+	},
+	"navigationStyle": "custom",
+	"navigationBarTextStyle": "white"
+}

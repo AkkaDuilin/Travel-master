@@ -1,0 +1,33 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+  <!-- <swiper indicator-dots='true' indicator-color='#fff' indicator-active-color='#87C6FF' autoplay='true' interval='1000' circular='true'>
+    <swiper-item wx:for='{{[1]}}' wx:for-item="banner" wx:key='index'>
+      <image src='../images/{{banner}}.jpg'></image>
+    </swiper-item>
+  </swiper> -->
+
+  <!-- 导航信号底条 -->
+  <view style="height: {{navBarHeight - 44}}px;background-color: rgba(218, 214, 214,.8);"></view>
+  <!-- 首页背景 -->
+  <image src="./icon/bgc.png" class="home-bgc" style="top:{{navBarHeight-5}}px;" mode="aspectFill"></image>
+  <!-- 胶囊所在条 -->
+  <topbar></topbar>
+  <!-- 首页导航icons条 -->
+  <navs icons="{{icons}}"></navs>
+  <!-- 首页文章模块 -->
+  <articles></articles>
+
+
+  <!-- <view class='article'>
+    <view class='article-item' wx:for='{{article}}' wx:key='index'>
+      <navigator url='{{item.link}}' open-type="navigate">
+        <image src='{{item.imgUrl}}' class='articlePic' mode="widthFix"></image>
+        <view class='articleTitle'>{{item.title}}</view>
+      </navigator>
+    </view>
+  </view> -->
+</view>
+
+<!-- /*<view>
+ /*<menu navs="{{navs}}" />
+/*</view> -->

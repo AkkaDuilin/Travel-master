@@ -1,0 +1,96 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/article01/article01",
+    "pages/article03/article03",
+    "pages/article04/article04",
+    "pages/article02/article02",
+    "pages/homePage/homePage",
+    "pages/find/find",
+    "pages/map/map",
+    "pages/main/main",
+    "pages/personal/personal",
+    "pages/minePage/minePage",
+    "pages/select_city/select_city",
+    "pages/orderList/orderList",
+    "pages/searchHotel/searchHotel",
+    "pages/hotelDetail/hotelDetail",
+    "pages/hotelFilter/hotelFilter"
+  ],
+  "subpackages": [
+    {
+      "root": "package1",
+      "pages": [
+        "pages/peonyHomePage/peonyHomePage",
+        "pages/peonySearch/peonySearch",
+        "pages/peonyCity/peonyCity",
+        "pages/peonyNews/peonyNews",
+        "pages/myPeony/myPeony",
+        "pages/peonyNoNetwork/peonyNoNetwork",
+        "pages/peonyDetails/peonyDetails",
+        "pages/peonyInfo/peonyInfo",
+        "pages/peonyResult/peonyResult"
+
+        
+      ],
+      "independent": false
+    },
+    {
+      "root": "package2",
+      "pages": [
+        "pages/home/home",
+        "pages/article01/article01",
+        "pages/article03/article03",
+        "pages/article02/article02"
+      ],
+      "independent": false
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#d1f5f0",
+    "navigationBarTitleText": "工享旅游",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "pages/images/home.png",
+        "selectedIconPath": "pages/images/home-active.png"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "text": "发现",
+        "iconPath": "pages/images/selected-leaf.png",
+        "selectedIconPath": "pages/images/selected-leaf.png"
+      },
+      {
+        "pagePath": "pages/map/map",
+        "iconPath": "pages/images/map.png",
+        "selectedIconPath": "pages/images/map_active.png",
+        "text": "地图"
+      },
+      {
+        "pagePath": "pages/homePage/homePage",
+        "text": "酒店",
+        "iconPath": "pages/images/AR.png",
+        "selectedIconPath": "pages/images/AR.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "pages/images/user.png",
+        "selectedIconPath": "pages/images/user-active.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示" 
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

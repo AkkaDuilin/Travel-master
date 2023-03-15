@@ -1,0 +1,8 @@
+<!--pages/home/components/topBar/topbar.wxml-->
+<view class="topbar">
+  <view style="width: calc( 750rpx - {{menuWidth+menuRight}}px);">
+    <image class="icon" src="./icon/1.jpg" mode="aspectFill"></image>
+    <search style="flex:1;" nillwidth="{{menuWidth+menuRight}}"></search>
+    <image class="message" src="./icon/pinglun.png"></image>
+  </view>
+</view>

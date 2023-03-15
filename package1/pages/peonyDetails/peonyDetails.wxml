@@ -1,0 +1,38 @@
+<!--pages/peonyDetails/peonyDetails.wxml-->
+<import src="../wxParse/wxParse.wxml" />
+<import src="../peonyNoNetwork/peonyNoNetwork.wxml" />
+<view class='peonyDetails-container' wx:if="{{judgeNetWork}}" id='peonyDetails'>
+  <view class='Details-img'>
+    <image src='{{peonyDetailsImg}}'  bindtap='echoDisplay'  lazy-load="true"></image>
+  </view>
+  <view class='Details-name'>
+    <!-- 获取Top1类标 -->
+    <view class='Details-cate'>
+      <text class='Details-text'>{{peonyDetailscate}}</text>
+    </view>
+    <view class='Details-cate-label'>
+      <text class='Details-typeName'>{{peonyDetailsname}}</text>
+    </view>
+    <view class='neighbor1' data-template="{{peonyDetailscate + '/' + peonyDetailsname}}" bindtap='searchNeighbor'>
+      <image src="../../images/neighbor.png" class='neighbor'></image>
+      <text class='neightbor_txt' >试试周边</text>
+    </view>
+
+    <!-- <text class='Details-text'>{{peonyDetailscate}}</text>
+    <text class='Details-typeName'>{{peonyDetailsname}}</text>
+    <view class='neighbor1' data-template="{{peonyname}}" bindtap='searchNeighbor'>
+      <image src="../../images/neighbor.png" class='neighbor'></image>
+    </view> -->
+  </view>
+  <!-- <view class='Details-intro'>
+    <text>简介</text>
+  </view> -->
+  <view class='Details-content' style='height:{{scrollHeight}}px;'>
+    <view class='content-template'>
+      <rich-text nodes="{{article_content}}"></rich-text>
+    </view>
+  </view>
+</view>
+<view class='PeonyPublicNetWork' wx:if="{{!judgeNetWork}}">
+  <template is="penonyNoNetWork" />
+</view>

@@ -1,0 +1,75 @@
+<import src="../wxParse/wxParse.wxml" />
+<import src="../peonyNoNetwork/peonyNoNetwork.wxml" />
+<view class="peonyInfo" wx:if="{{judgeNetWork}}" id='peonyRecord' >
+  <view class='peonyInfo-imageBox'>
+    <view class='peonyInfo-imageBox_item'>
+      <view class='imageBox-item_uploadImg'>
+        <image src='{{uploadImg}}' mode='cover' bindtap='clickUpload'  lazy-load="true"   binderror="errorFunction_source"></image>
+        <text class='item-uploadImg_text'>上传图片</text>
+      </view>
+      <view class='imageBox-item_tempImg'>
+        <image src='{{coverImg}}' mode='cover' bindtap='clickCover'  lazy-load="true"   binderror="errorFunction_cam"></image>
+        <text class='item-tempImg_text'>类激活图</text>
+      </view>
+    </view>
+    <view class='peonyInfo-locationAndDate'>
+      <view class='peonyInfo-location'>
+        <image class='peonyInfo-location_icon' src='../../images/didian.png' mode='cover'></image>
+        <text class='peonyInfo-location_text'>{{location}}</text>
+      </view>
+      <view class='peonyInfo-Date'>
+            <image class='peonyInfo-date_icon' src='../../images/shijian.png' mode='cover'></image>
+        <text class='peonyInfo-date_text'>{{peonyTimes}}</text>
+      </view>
+    </view>
+  </view>
+  <!--名称 -->
+  <view class='peonyInfo-names'>
+    <text class='peonyInfo-names_text'>查询结果：   {{softmax[0].label}}</text>
+    <view class='neighbor1_feedback' data-template="{{coverResultImg}}" bindtap='bind_feedback'>
+      <image src="../../images/feedback.png" class='neighbor'></image>
+      <text class='tips_feedback'>点我反馈</text>
+    </view>
+    <!-- </view> -->
+  </view>
+  
+  <modal class='modal_feedback' hidden="{{hiddenfeedback}}" title="识别错误反馈" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+      <input type='text'placeholder="请输入正确类别" auto-focus value="{{feedback_txt}}" bindinput="feedback_txt"/>  
+  </modal>
+
+  <view class='content' style='height:{{scrollHeight}}px'>
+    <view class='intro-text'>
+      <text>Softmax</text>
+    </view>
+    <view class='softmax'>
+      <view class="table">
+        <view class="tr">
+          <view class="th th1">Rank</view>
+          <view class="th th2">Label</view>
+          <view class="th th3">Prob</view>
+        </view>
+        <view class='tr' wx:for="{{softmax}}" wx:for-index="index" wx:key="item" wx:for-item="item">
+            <view class="td td1">{{index}}</view>
+            <view class="td td2">{{item.label}}</view>
+            <view class="td td3">{{item.probability}}</view>
+        </view>
+      </view>
+    </view>
+    <view class='intro-text'>
+      <text>相似度匹配</text>
+    </view>
+    <view class='matrix'>
+      <block class='matrix-block' wx:for="{{matrix}}" wx:for-index="index" wx:key="item" wx:for-item="item">
+        <view class='package-matrix'>
+          <view class='package-matrix-view' data-template="{{index}}" bindtap='detailsShow'>
+            <image src='{{item}}' mode='cover'  lazy-load="true"></image> <!--显示训练集中最相似的图片-->
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+<!-- 判断有无网络 -->
+<view class='PeonyPublicNetWork' wx:if="{{!judgeNetWork}}">
+  <template is="penonyNoNetWork" />
+</view>

@@ -1,0 +1,48 @@
+<!--pages/home/components/articles/articles.wxml-->
+<view class="article-top">
+  <image class="icon" src="./icon/angle-right.png"></image>
+  <view>精选推荐</view>
+  <image class="icon" src="./icon/angle-left.png"></image>
+</view>
+<scroll-view scroll-y="true" style="height: calc(100vh - 390rpx);">
+<view class="article" wx:for="{{articles}}" wx:for-index="idx" wx:for-item="article">
+  <!-- {{article.auther}} -->
+  <view class="title">
+    <view>{{article.title}}</view>
+    <view class="tag">
+      {{article.tag}}
+    </view>
+  </view>
+  <view class="content">
+    <image src="{{article.image}}"></image>
+    <view class="content-body">
+      {{article.content}}
+    </view>
+  </view>
+  <view class="footer">
+    <view style="gap: 20rpx;">
+      <image src="{{article.autheravter}}" class="avtar"></image>
+      <view>{{article.auther}}</view>
+      <view style="gap:10rpx;">
+        在
+        <view style="color: #FA9D26;">
+          {{article.from}}
+        </view>
+      </view>
+    </view>
+    <view style="gap:20rpx;">
+      <view>{{article.time}}</view>
+      <view style="color: #FA9D26;">
+        {{article.view}}
+        <image class="icon" src="./icon/view.png"></image>
+      </view>
+      <view style="color: #FA9D26;">
+        {{article.commet}}
+        <image class="icon" src="./icon/pinglun.png"></image>
+      </view>
+    </view>
+  </view>
+
+</view>
+<view class="article-last-child"></view>
+</scroll-view>

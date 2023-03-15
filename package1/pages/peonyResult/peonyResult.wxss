@@ -1,0 +1,308 @@
+/* pages/peonyResult/peonyResult.wxss */
+/* pages/peonyInfo/peonyInfo.wxss */
+
+page {
+  height: 100%;
+}
+
+.peonyResult {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #fff;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 图片盒子 */
+
+.peonyInfo-imageBox {
+  width: 100%;
+  height: 417rpx;
+  /* margin-top: 2rpx; */
+  background:  #f2f2f2;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.peonyInfo-imageBox_item {
+  height: 365rpx;
+  overflow: hidden;
+  padding-left: 5rpx;
+  padding-right: 5rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* 上传图片 */
+
+.imageBox-item_uploadImg {
+  width: 365rpx;
+  height: 365rpx;
+  padding-top: 5rpx;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10rpx;
+}
+
+/* 模板图片 */
+
+.imageBox-item_tempImg {
+  width: 365rpx;
+  height: 365rpx;
+  padding-top: 5rpx;
+  border-radius: 10rpx;
+  /* margin-left: 18rpx; */
+  position: relative;
+  overflow: hidden;
+}
+
+/* 设置图片大小 */
+
+.imageBox-item_tempImg  image, .imageBox-item_uploadImg image {
+  width: 365rpx;
+  height: 365rpx;
+}
+
+/* 设置图片文字位置 */
+
+.item-tempImg_text, .item-uploadImg_text {
+  position: absolute;
+  right: 5rpx;
+  top: 12rpx;
+}
+
+/* 设置模板图片文字大小 */
+
+.item-tempImg_text {
+  font-size: 25rpx;
+  color: #d4237a;
+  font-weight: 400;
+}
+
+/* 设置上传图片文字大小 */
+
+.item-uploadImg_text {
+  font-size: 25rpx;
+  color: #d4237a;
+  font-weight: 400;
+}
+
+.peonyInfo-locationAndDate {
+  width: 100%;
+  height: 52rpx;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  font-size: 25rpx;
+}
+
+.peonyLabel-Prob {
+  width: 100%;
+  height: 82rpx;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  font-size: 25rpx;
+}
+
+.peonyInfo-location {
+  width: 50%;
+  display: flex;
+  padding-left: 21rpx;
+  box-sizing: border-box;
+  align-items: center;
+}
+.peonyInfo-location_icon{
+  width: 15rpx;
+  height: 21rpx;
+}
+.peonyInfo-location_text{
+  margin-left: 15rpx;
+  color: #666666;
+}
+
+.peonyInfo-Date {
+  width: 50%;
+  display: flex;
+  padding-right: 21rpx;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: flex-end;
+}
+.peonyInfo-date_icon{
+width: 21rpx;
+height: 21rpx;
+margin-right: 15rpx;
+}
+.peonyInfo-date_text{
+color: #666666;
+}
+
+.peonyLabel-Prob{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.peonyInfo-names {
+  width: 40%;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-size: 28rpx;
+  line-height: 88rpx;
+  height: 88rpx;
+  color: #000;
+  border-bottom: 1px solid #ccc;
+}
+
+.peonyInfo-names_text{
+  margin-left: 3px;
+}
+
+.brief-detail{
+  width: 18%;
+  height: 100%;
+  margin-top: 20rpx;
+  margin-right: 50rpx
+}
+.query_detail{
+  border-radius: 3rpx;
+  font-size: 27rpx;
+}
+.neighbor1{
+  width: 20%;
+  line-height: 88rpx;
+  box-sizing: border-box;
+  height: 88rpx;
+  /* padding-left: 21rpx; */
+  overflow: hidden;
+  margin-right: 15rpx;
+}
+.neighbor1_feedback{
+  width: 20%;
+  line-height: 88rpx;
+  box-sizing: border-box;
+  height: 88rpx;
+  /* padding-left: 21rpx; */
+  overflow: hidden;
+}
+.tips_feedback{
+  margin-top: 20rpx;
+  height: 45rpx;
+  width: 45rpx;
+  font-size: 18rpx;
+  color: #ccc;
+}
+.neighbor{
+  margin-top: 20rpx;
+  height: 65rpx;
+  width: 65rpx;
+  
+}
+
+
+/* 富文本编辑器设置 */
+
+.content{
+  margin-top: 25rpx;
+  height: 600rpx;
+  overflow: auto;
+  width: 100%;
+  padding-right:21rpx; 
+  padding-left: 21rpx;
+  padding-bottom: 35rpx;
+  font-size: 28rpx;
+  box-sizing: border-box;
+}
+
+/*凹槽宽度*/
+.content::-webkit-scrollbar {
+  width: 8rpx;
+  height: 8rpx;
+}
+
+/*拖动条*/
+
+.content::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 6rpx;
+}
+
+/*背景槽*/
+
+.content::-webkit-scrollbar-track {
+  background-color: #ddd;
+  border-radius: 6rpx;
+}
+
+.table{
+  border:1px solid #dadada;
+  border-right:0;
+  border-bottom: 0;
+  width: 98%;
+  margin-left: 1%;
+}
+.tr{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+}
+.th,.td{
+  padding: 10px;
+  border-bottom: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  text-align: center;
+  width: 100%;
+}
+
+.th1,.th3,.td1,.td3{
+  width: 50%;
+}
+.th{
+  font-weight: 800;
+  background-color: #ffffff;
+  font-size: 28rpx;
+  color: #330e0e;
+}
+.td{
+  font-size: 30rpx;
+  color: #d4237a;
+}
+
+.matrix {
+  width: 709rpx;
+  margin: 0 auto;
+  /* height: 100%; */
+  box-sizing: border-box;
+  /* overflow: auto; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 15rpx;
+  padding-bottom: 15rpx;
+}
+
+.package-matrix-view{
+  height: 230rpx;
+  overflow: hidden;
+}
+
+.package-matrix-view image {
+  width: 220rpx;
+  height: 220rpx;
+  margin-left: 10rpx;
+}
+
+.intro-text{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 15rpx;
+
+}

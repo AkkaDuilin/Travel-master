@@ -1,0 +1,107 @@
+/* pages/mine/mine.wxss */
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #d1f5f073;
+}
+
+.home-bgc{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 750rpx;
+  height: 1100rpx;
+}
+
+.account-bg {
+  width: 100%;
+  height: 150rpx;
+}
+.userinfo-avatar {
+  width: 108rpx;
+  height: 108rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  background-size: cover;
+}
+.userinfo-nickname {
+  color: rgba(255, 255, 255, 0);
+}
+/* 订单 */
+.order {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 90rpx;
+}
+.myorder-text {
+  font-size: 35rpx;
+  color: black;
+  margin: 20rpx;
+  width: 40%;
+}
+.myorderlook-text {
+  font-size: 35rpx;
+  color: black;
+  position: relative;
+  right: 20rpx;
+  width: 60%;
+  text-align: right;
+}
+.next-image {
+  width: 20rpx;
+  height: 25rpx;
+  position: relative;
+  right: 10rpx;
+}
+.navs {
+  display: flex;
+}
+.nav-item {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20rpx;
+}
+.nav-item .nav-image {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 5rpx;
+}
+.nav-item text {
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  color: black;
+}
+/* 列表 */
+.person-list {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80rpx;
+}
+.item-image {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 20rpx;
+}
+.item-text {
+  color: black;
+  font-size: 25rpx;
+  margin-left: 20rpx;
+}
+.person-line {
+  width: 100%;
+  height: 1rpx;
+  background: lightgray;
+  margin-left: 90rpx;
+}

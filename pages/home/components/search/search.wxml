@@ -1,0 +1,10 @@
+<!--components/search/search.wxml-->
+<view class="search">
+  <image class="search-icon" src="./icon/sousuo.png"></image>
+  <view class="search-ellipsis" wx:if="{{nillwidth == '0'}}">
+    搜索目的地/景点/酒店等
+  </view>
+  <view wx:else class="search-ellipsis" style="width: calc(420rpx - {{nillwidth}}px);">
+    搜索目的地/景点/酒店等
+  </view>
+</view>

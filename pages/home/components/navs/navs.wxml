@@ -1,0 +1,15 @@
+<!--pages/home/components/navs/navs.wxml-->
+<view class='navs'>
+    <view wx:for='{{icons}}' wx:for-item='icon' wx:key='icon.name' class='nav-item' bindtap="{{icon.ontap}}">
+      <view style="background-color: {{icon.fillColor}};">
+        <image src='{{icon.icon}}' class='iconPic' mode="aspectFit"></image>
+      </view>
+      <view style="color: {{icon.fillColor}};">
+        {{icon.txt}}
+      </view>
+    </view>
+    <!-- <button style="height: 70rpx;width: 17%;font-size: 30rpx;color: rgb(57, 102, 228);" bindtap="gotoPlace">实践</button>
+    <button style="height: 70rpx;width: 18%;font-size: 30rpx;color: rgb(57, 102, 228);" bindtap="gotoUp">分享</button>
+    <button style="height: 70rpx;width: 18%;font-size: 30rpx;color: rgb(57, 102, 228);" bindtap="gotoMap">工艺品</button>
+    <button style="height: 70rpx;width: 17%;font-size: 30rpx;color: rgb(57, 102, 228);" bindtap="onEnterARGame">VR</button> -->
+  </view>

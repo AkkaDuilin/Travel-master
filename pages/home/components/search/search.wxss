@@ -1,0 +1,21 @@
+/* components/search/search.wxss */
+.search {
+  color: black;
+  border-radius: 10rpx;
+  border: 3rpx solid #FFA310;
+  display: flex;
+  align-items: center;
+  gap:10rpx;
+  padding: 10rpx;
+}
+.search-ellipsis{
+  display: block;
+  /* flex: 1; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.search-icon {
+  width: 40rpx;
+  height: 40rpx;
+}

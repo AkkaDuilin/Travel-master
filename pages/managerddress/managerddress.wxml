@@ -1,0 +1,29 @@
+<!--manageAddress.wxml-->
+<view id="address">
+<view wx:for="{{address}}">
+  <view class="address_item flexRowBetween">
+    <view class="address_left">
+      <view class="text1">{{item.username}}</view>
+      <view class="text1 text_other">{{item.area}} {{item.address}}</view>
+    </view>
+    <view class="address_right">{{item.phonenumber}}</view>
+  </view>
+  <view class="address_set flexRowBetween">
+    <view class="default">
+    <view wx:if="{{item.moren>0}}">
+      <image src="../../resources/images/moren.png"></image>
+      <text>默认地址</text>
+    </view>
+  </view>
+    <view class="edit">
+      <image src="../../resources/images/edit.png"></image>
+      <text>编辑</text>
+    </view>
+    <view class="edit delete" catchtap='delete_address' data-addressId='{{item.id}}'>
+      <image src="../../resources/images/delete.png"></image>
+      <text>删除</text>
+    </view>
+  </view>
+  <view class="submit_info" bindtap="newAddress">添加新地址</view>
+  </view>
+</view>

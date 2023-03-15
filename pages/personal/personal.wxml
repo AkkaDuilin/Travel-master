@@ -1,0 +1,62 @@
+<!--pages/mine/mine.wxml-->
+<view>
+    <!-- 首页背景 -->
+    <image src="./icon/bgc.png" class="home-bgc" style="top:{{navBarHeight-5}}px;" mode="aspectFill"></image>
+  <view class="userinfo" style="width: 750rpx; height: 211rpx; display: flex; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" ></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+
+  <view class="separate"></view>
+
+  <view class="order" catchtap="toOrder">
+    <text class="myorder-text">我的订单</text>
+    <text class="myorderlook-text" catchtap='allOrders'>查看全部订单</text>
+    <image class="next-image" src= "../../resources/images/orders.png"></image>
+  </view>
+  <view class="line"></view>
+
+  <view class="navs">
+    <block wx:for-items="{{orderItems}}" wx:key="name">
+      <view class="nav-item" catchtap="toOrder" data-type="{{item.name}}" data-typeid="{{item.typeId}}">
+        <image src="{{item.imageurl}}" class="nav-image" />
+        <text>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="separate"></view>
+  <view class="person-list">
+    <view class="list-item">
+      <image class="item-image" src= "../../resources/images/mysc.png"></image>
+      <text class="item-text" catchtap='show_collection'>我的收藏</text>
+    </view>
+    <view class="person-line"></view>
+    <view class="person-line"></view>
+    <view class="list-item">
+      <image class="item-image" src= "../../resources/images/address.png"></image>
+      <text class="item-text" catchtap='manageraddress'>收货地址</text>
+    </view>
+    <view class="person-line"></view>
+      <view class="person-line"></view>
+    <view class="list-item">
+      <image class="item-image" src= "../../resources/images/comment.png"></image>
+      <text class="item-text">我的评价</text>
+    </view>
+    <view class="person-line"></view>
+      <view class="person-line"></view>
+    <view class="list-item">
+      <image class="item-image" src= "../../resources/images/about.png"></image>
+      <text class="item-text">关于工旅</text>
+    </view>
+    <view class="person-line"></view>
+      <view class="person-line"></view>
+    <view class="list-item">
+      <image class="item-image" src= "../../resources/images/fen.png"></image>
+      <text class="item-text">推广邀请</text>
+    </view>
+      <view class="person-line"></view>
+      <view class="person-line"></view>
+  </view>
+  <view class="separate"></view>
+</view>

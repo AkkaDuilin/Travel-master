@@ -1,0 +1,40 @@
+/* pages/home/components/navs/navs.wxss */
+
+.navs {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  /* background-color: #fff; */
+  /* margin-bottom: 10px; */
+}
+
+.nav-item {
+  width: 25%;
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.nav-item>view:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 82rpx;
+  height: 78rpx;
+  border-radius: 30rpx;
+  padding: 10rpx;
+}
+
+.iconPic {
+
+  align-items: center;
+  width: 48rpx;
+  height: 48rpx;
+}

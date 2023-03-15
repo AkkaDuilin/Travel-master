@@ -1,0 +1,20 @@
+/* pages/home/components/topBar/topbar.wxss */
+.topbar{
+  display: flex;
+  align-items: center;
+  height: 90rpx;
+  background: #fff;
+}
+.topbar >view{
+  display: flex;
+  align-items: center;
+}
+.topbar .icon{
+  width: 180rpx;
+  height: 80rpx;
+}
+.topbar .message{
+  margin: 0 5rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
