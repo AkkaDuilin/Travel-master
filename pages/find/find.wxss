@@ -3,7 +3,7 @@
   width: 100%;
   height: 400rpx; 
   position: relative;
-  background-color: #3c87b6;
+  background-color: #f0f2f1;
 }
 .container {
   display: flex;

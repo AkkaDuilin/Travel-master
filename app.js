@@ -108,25 +108,22 @@ App({
     isVersionHigh: false,
     likeList: [
       {
-        title: "大理洱海天域",
-        imgUrl: "../images/like-1.png"
+        title: "南京太古可口可乐博物馆",
+        imgUrl: "/res/article_img/coca.png"
       },
       {
-        title: "塞尔维亚慢旅行",
-        imgUrl: "../images/like-2.png"
+        title: "风禧文化艺术中心",
+        imgUrl: "/res/article_img/fengxi.jpg"
       },
       {
-        title: "千岛湖皮划艇",
-        imgUrl: "../images/like-3.png"
+        title: "万三酒庄文创工厂",
+        imgUrl: "/res/article_img/wansan.jpg"
       },
       {
-        title: "阳山桃花季",
-        imgUrl: "../images/like-4.png"
+        title: "镇江中国醋文化博物馆",
+        imgUrl: "/res/article_img/zhenjOut.jpeg"
       },
-      {
-        title: "腾格里沙漠",
-        imgUrl: "../images/like-5.png"
-      }
+      
     ],
     navBarHeight: 0, // 导航栏高度
     menuRight: 0, // 胶囊距右方间距（方保持左、右间距一致）

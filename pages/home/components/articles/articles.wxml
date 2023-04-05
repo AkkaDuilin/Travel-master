@@ -7,19 +7,21 @@
 <scroll-view scroll-y="true" style="height: calc(100vh - 390rpx);">
 <view class="article" wx:for="{{articles}}" wx:for-index="idx" wx:for-item="article">
   <!-- {{article.auther}} -->
-  <view class="title">
-    <view>{{article.title}}</view>
-    <view class="tag">
-      {{article.tag}}
+ 
+  <navigator url = '{{article.link}}' open-type="navigate" class="article-item-img">
+    <view class="title">
+      <view>{{article.title}}</view>
+      <view class="tag">
+        {{article.tag}}
+      </view>
     </view>
-  </view>
-  <view class="content">
-    <image src="{{article.image}}"></image>
-    <view class="content-body">
-      {{article.content}}
+    <view class="content">
+      <image src="{{article.image}}"></image>
+      <view class="content-body" data-text="{{text}}">
+        {{article.content}}
+      </view>
     </view>
-  </view>
-  <view class="footer">
+    <view class="footer">
     <view style="gap: 20rpx;">
       <image src="{{article.autheravter}}" class="avtar"></image>
       <view>{{article.auther}}</view>
@@ -42,6 +44,10 @@
       </view>
     </view>
   </view>
+
+  
+  </navigator>
+  
 
 </view>
 <view class="article-last-child"></view>

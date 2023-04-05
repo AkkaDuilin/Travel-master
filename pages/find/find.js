@@ -17,7 +17,7 @@ Page({
         text: '游记'
       }, {
         icon: 'https://gw.alicdn.com/tfs/TB1_xIFbwoQMeJjy0FoXXcShVXa-48-48.png_48x48q50.jpg_.webp',
-        text: '买家秀'
+        text: '研学游'
       }
     ],
     bannerList:[

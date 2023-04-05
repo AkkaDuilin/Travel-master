@@ -3,5 +3,31 @@
   "projectname": "Travel-master",
   "setting": {
     "compileHotReLoad": true
+  },
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/home/home",
+          "pathName": "pages/home/home",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "Homepage/pages/article06/article06",
+          "pathName": "Homepage/pages/article06/article06",
+          "scene": null
+        }
+      ]
+    }
   }
 }
